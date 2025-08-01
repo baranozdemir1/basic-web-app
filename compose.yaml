@@ -9,5 +9,6 @@ services:
       - traefik.enable=true
       - traefik.http.middlewares.mybasicauth.basicauth.users=test:$2y$12$ci.4U63YX83CwkyUrjqxAucnmi2xXOIlEF6T/KdP9824f1Rf1iyNG
       - traefik.http.routers.https-0-ts4cs80k0wk44sogoc4sgok0-web.middlewares=gzip,mybasicauth
+      - caddy_0.basicauth.test="$2a$14$9kLRaqJvMW/rG93e7w3X2OEjynGLrNutiS0a1io5qWJEiphkwKD7G"
   redis:
     image: "redis:alpine"
